@@ -10,8 +10,14 @@
 
 
 export function find(array, callback) {
-  // Your code goes here...
-  
+  let firstFound = undefined;
+  for (let element of array) {
+    if (callback(element)) {
+      firstFound = element;
+      break;
+    }
+  }
+  return firstFound;
 }
 
 
